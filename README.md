@@ -1,2 +1,3 @@
 # ArgoCD apps
-ArgoCD Apps collections
+ArgoCD Apps collection with ApplicationSet
+
