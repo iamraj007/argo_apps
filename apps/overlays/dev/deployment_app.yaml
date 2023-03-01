@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-        - name: gitops-front-container 
+        - name: gitops-front-container-app 
 #          env:
 #            - name: ENV_VAR
 #              value: ENV_VAR_VALUE
