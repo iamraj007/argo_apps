@@ -13,7 +13,7 @@ spec:
         app: gitops-nginx
     spec:
       containers:
-      - image: iamraj007/gitopsapp:c8fac058 
+      - image: planethomeregistry.azurecr.io/terraformer:0.13.4
         name: gitops-front-container
         ports:
         - containerPort: 80
