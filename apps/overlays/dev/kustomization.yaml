@@ -17,8 +17,8 @@ patchesStrategicMerge:
 - replica-and-rollout-strategy.yaml
 
 images:
-- name: iamraj007/gitopsapp
-  newTag: 2a3390e7
+- name:  planethomeregistry.azurecr.io/terraformer
+  newTag: 0.13.4_2
 
 nameSuffix: -dev
 
