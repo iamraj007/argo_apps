@@ -1,2 +1,2 @@
-# argo_apps
+# ArgoCD apps
 ArgoCD Apps collections

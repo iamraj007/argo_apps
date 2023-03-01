@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: mygitops-appset
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - EnvName: dev
+        namespace: dev
+        clustername: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: "{{EnvName}}"
+    spec:
+      project: default
+      source:
+        repoURL: https://gitlab.com/iamraj007/gitops-repo.git
+        targetRevision: HEAD
+        path: apps/overlays/{{EnvName}}
+      destination:
+        server: "{{clustername}}"
+        namespace: "{{namespace}}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - PruneLast=true
