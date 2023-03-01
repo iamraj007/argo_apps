@@ -1,12 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: terraform=planethomeregistry.azurecr.io/terraformer
-    argocd-image-updater.argoproj.io/terraform.force-update: 'true'
-    argocd-image-updater.argoproj.io/terraform.pull-secret: 'pullsecret:develop-namespace/develop-app-gitlab-secrets'
-    argocd-image-updater.argoproj.io/terraform.pull-secret: secret:argocd-image-updater/acr#acr
-    argocd-image-updater.argoproj.io/terraform.update-strategy: latest        
   name: mygitops-app-main
   namespace: argocd
 spec:
