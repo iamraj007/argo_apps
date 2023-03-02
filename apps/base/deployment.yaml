@@ -13,7 +13,7 @@ spec:
         app: gitops-nginx
     spec:
       containers:
-      - image: iamraj007/gitopsapp:6012394c 
+      - image: iamraj007/my-nginx:devv1
         name: gitops-front-container-app
         ports:
         - containerPort: 80
