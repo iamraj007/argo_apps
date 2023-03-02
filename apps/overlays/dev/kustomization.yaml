@@ -18,7 +18,9 @@ patchesStrategicMerge:
 
 images:
 - name: iamraj007/gitopsapp
-  newTag: c0f49073
+  newTag: c8fac058
 
 nameSuffix: -dev
+namePrefix: myorg-
+
 

@@ -3,6 +3,10 @@ kind: Application
 metadata:
   name: mygitops-app-main
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/iamraj007/gitopsapp  #repository name
+    argocd-image-updater.argoproj.io/git-branch: main                                   #git branch 
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
 spec:
   project: default
   source:
